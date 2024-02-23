@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Css Stylesheet -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" media=" screen and (max-width:768px)" href="./css/mobile.css" />
+    <!-- unicons -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- favicon -->
+    <link rel="icon" href="./Imgs/icons/Vector.png" />
+
+    <!-- script tag -->
+    <script defer src="./JS/script.js"></script>
+    <script defer src="./JS/countries.js"></script>
+
+    <!-- ScrollReveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- swiper js -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+    <!-- Title -->
+    <title>BackPacker</title>
+  </head>
+  <body>
+    <!-- Showcase -->
+    <main class="main" id="home">
+      <!-- Header -->
+      <header class="header">
+        <!-- logo -->
+        <div class="logo">
+          <h3 class="logo-text">
+            BackPACKER<sup
+              ><span><img src="./Imgs/icons/Vector.png" alt="" /></span
+            ></sup>
+          </h3>
+        </div>
+
+        <!-- navbar -->
+        <nav class="navbar">
+          <ul class="navlists">
+            <li class="navlist"><a href="#home">Home</a></li>
+            <li class="navlist"><a href="#restaurants">Hotels</a></li>
+            <li class="navlist"><a href="#restaurants">Restaurants</a></li>
+            <li class="navlist"><a href="#tours">Tours</a></li>
+            <li class="navlist"><a href="#destinations">Destinations</a></li>
+            <li class="navlist"><a href="#activities">Activities</a></li>
+            <li class="navlist"><a href="register.html">Register</a></li>
+          </ul>
+        </nav>
+
+        <!-- user || navigator -->
+        <div class="user-profile">
+          <div class="profile-name">
+            <h2>
+              <span class="hello"> Hello, </span>
+              <span class="indiviual-name"> User </span>
+            </h2>
+          </div>
+
+          <div class="profile-pic">
+            <a href="profile.html"
+              ><img src="./Imgs/ProfilePic/124164909_2212008852330390_5501660797980127002_n (1).jpg" alt=""
+            /></a>
+          </div>
+        </div>
+      </header>
+
+      <!-- showcase-content -->
+      <div class="showcase-content">
+        <h1 style="font-size: 70px">We deliver Happiness..</h1>
+        <a href="https://earth.google.com/web/" target="_blank" class="showcase-button">
+          <img src="./Imgs/icons/globe.png" alt="" /> Discover on 3D globe</a
+        >
+      </div>
+
+      <!-- showcase-search -->
+      <div class="showcase-search mb-4">
+        <div class="row">
+          <div class="col-md-6 m-auto">
+            <div class="ew d-flex justify-content-between p-3">
+              <div class="form-check d-flex">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                <label class="form-check-label check ms-3" for="flexRadioDefault1"> I want to send </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked />
+                <label class="form-check-label check" for="flexRadioDefault2"> I want to receive </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked />
+                <label class="form-check-label check" for="flexRadioDefault2"> I want to carry </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-5">
+          <div class="filters">
+            <div class="filter new_filter" id="destinationFilter" onclick="openPopup(0)">
+              <div class="search-icon">
+                <img src="./Imgs/icons/location.png" alt="" />
+              </div>
+              <div class="search-text">
+                <h4>From</h4>
+
+                <h2 id="from_city">Select Location</h2>
+              </div>
+            </div>
+
+            <div class="filter new_filter" id="destinationFilter" onclick="openPopup(1)">
+              <div class="search-icon">
+                <img src="./Imgs/icons/location.png" alt="" />
+              </div>
+              <div class="search-text">
+                <h4>To</h4>
+                <h2 id="to_city">Select Location</h2>
+              </div>
+            </div>
+
+            <div class="filter new_filter" id="dateFilter" onclick="openDate()">
+              <div class="search-icon">
+                <img src="./Imgs/icons/calendar.png" alt="" />
+              </div>
+              <div class="search-text">
+                <h4>When</h4>
+                <h2>Chose a date</h2>
+              </div>
+            </div>
+
+            <div class="filter new_filter">
+              <div class="search-icon">
+                <img src="./Imgs/icons/guest.png" alt="" />
+              </div>
+              <div class="search-text">
+                <h4>Package Allowance</h4>
+                <h2>Select in kgs</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-5">
+          <div class="col-md-4 m-auto">
+            <div class="ew d-flex justify-content-between p-3">
+              <div class="form-check d-flex">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                <label class="form-check-label check ms-3" for="flexRadioDefault1"> Document </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked />
+                <label class="form-check-label check" for="flexRadioDefault2"> Package </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-5 m-auto">
+            <div class="card documrnt p-3">
+              <p class="text-center">Document Size</p>
+
+              <div class="row">
+                <div class="col-md-11 m-auto">
+                  <div class="d-flex justify-content-between mt-3 mb-3">
+                    <a href="" class="btn btn-outline-primary"> Samll</a>
+                    <a href="" class="btn btn-outline-primary"> Medium</a>
+                    <a href="" class="btn btn-outline-primary"> Large</a>
+                    <a href="" class="btn btn-outline-primary"> Extra Large </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-5">
+          <div class="col-md-6 m-auto">
+            <div class="row">
+              <div class="col-md-1"></div>
+              <div class="col-md-4">
+                <div class="input-group mb-3 me-2">
+                  <button class="btn btn-outline-secondary" style="font-size: 15px">Weight</button>
+                  <input
+                    type="text"
+                    class="form-control p-4"
+                    placeholder=""
+                    aria-label="Example text with button addon"
+                    aria-describedby="button-addon1"
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="row">
+                  <div class="ew d-flex justify-content-between p-3">
+                    <div class="form-check d-flex">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                      <label class="form-check-label check ms-3" for="flexRadioDefault1"> Kg </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked />
+                      <label class="form-check-label check" for="flexRadioDefault2"> Gm </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked />
+                      <label class="form-check-label check" for="flexRadioDefault2"> Lbs </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row m-5">
+          <div class="search-button-icon">
+            <a href="login.html">
+              <img src="./Imgs/icons/search.svg" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- popular Destinations -->
+    <section class="post">
+      <div class="conatiner">
+        <div class="row">
+          <div class="col-md-4 m-auto">
+            <div class="heading d-flex justify-content-between">
+              <button type="button" class="btn btn-primary position-relative p-3" style="font-size: 18px">
+                All post
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                  99+
+                  <span class="visually-hidden">unread messages</span>
+                </span>
+              </button>
+              <button type="button" class="btn btn-outline-primary position-relative p-3" style="font-size: 18px">
+                Sender
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                  99+
+                  <span class="visually-hidden">unread messages</span>
+                </span>
+              </button>
+              <button type="button" class="btn btn-outline-primary position-relative p-3" style="font-size: 18px">
+                Receiver
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                  99+
+                  <span class="visually-hidden">unread messages</span>
+                </span>
+              </button>
+              <button type="button" class="btn btn-outline-primary position-relative p-3" style="font-size: 18px">
+                Carrier
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                  99+
+                  <span class="visually-hidden">unread messages</span>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-5 mt-5 m-auto">
+            <div class="card text-center p-4">
+              <div class="card-header d-flex justify-content-between">
+                <div>
+                  <div class="d-flex">
+                    <img src="imgs/1.png" alt="" style="width: 40px" />
+                    <h4 class="mt-3 ms-3">
+                      Ben den Engelsen
+                      <span style="font-size: 10px">10 h</span>
+                    </h4>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="dropdown">
+                    <button
+                      class="btn btn-secondary dropdown-toggle"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      More
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Share</a></li>
+                      <li><a class="dropdown-item" href="#">Bookmarks</a></li>
+                      <li><a class="dropdown-item" href="#">Block</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <h2 class="card-title">I want to carry</h2>
+                <p class="card-text">From : Japan</p>
+                <p class="card-text">To : Japan</p>
+                <p class="card-text">Pickup : 02-Nov-2023 Thursday</p>
+                <p class="card-text">Drop of : 06-Nov-2023 Monday</p>
+                <p class="card-text">Parcel type : Document</p>
+                <p class="card-text">Size : Small</p>
+                <p class="card-text">Weight : 100 gm</p>
+
+                <div class="tours-cards">
+                  <div class="tours-card">
+                    <div class="tours-card-content">
+                      <div class="tours-card-contents-text">
+                        <h3>East Village Ice Cream Crawl</h3>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                          et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                          aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                          culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <h6 class="p-5" style="font-size: 15px"></h6>
+
+                <img src="imgs/2.jpg" alt="" class="img-fluid" />
+              </div>
+              <div class="tours-card-content-icons m-auto">
+                <h6><img src="./Imgs/icons/calendersml.png" alt="" /> 2 Today ago</h6>
+                <h6><img src="./Imgs/icons/user.png" alt="" /> Sender</h6>
+                <h6><img src="./Imgs/icons/message.png" alt="" /> 2</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-5 mt-5 m-auto">
+            <div class="card text-center p-4">
+              <div class="card-header d-flex justify-content-between">
+                <div>
+                  <div class="d-flex">
+                    <img src="imgs/1.png" alt="" style="width: 40px" />
+                    <h4 class="mt-3 ms-3">
+                      Ben den Engelsen
+                      <span style="font-size: 10px">10 h</span>
+                    </h4>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="dropdown">
+                    <button
+                      class="btn btn-secondary dropdown-toggle"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      ...
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <h2 class="card-title">I want to carry</h2>
+                <p class="card-text">From : Japan</p>
+                <p class="card-text">To : Japan</p>
+                <p class="card-text">Pickup : 02-Nov-2023 Thursday</p>
+                <p class="card-text">Drop of : 06-Nov-2023 Monday</p>
+                <p class="card-text">Parcel type : Document</p>
+                <p class="card-text">Size : Small</p>
+                <p class="card-text">Weight : 100 gm</p>
+
+                <div class="tours-cards">
+                  <div class="tours-card">
+                    <div class="tours-card-content">
+                      <div class="tours-card-contents-text">
+                        <h3>East Village Ice Cream Crawl</h3>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                          et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                          aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                          culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <h6 class="p-5" style="font-size: 15px"></h6>
+
+                <img src="imgs/2.jpg" alt="" class="img-fluid" />
+              </div>
+              <div class="tours-card-content-icons m-auto">
+                <h6><img src="./Imgs/icons/calendersml.png" alt="" /> 2 Today ago</h6>
+                <h6><img src="./Imgs/icons/user.png" alt="" /> Sender</h6>
+                <h6><img src="./Imgs/icons/message.png" alt="" /> 2</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="destinations" id="destinations">
+      <div class="container">
+        <!-- title -->
+        <h2 class="section-title">Popular Destinations</h2>
+        <!-- cards -->
+
+        <div class="swiper swiper1">
+          <div class="destinations-cards swiper-wrapper">
+            <!-- card 1 -->
+            <div class="destination-card swiper-slide">
+              <img
+                src="https://images.unsplash.com/photo-1581790061118-2cd9a40164b0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80"
+                alt=""
+                width="203"
+                height="181"
+              />
+              <h5>Big sur</h5>
+              <h6>Califonia USA</h6>
+            </div>
+            <!-- card 2 -->
+            <div class="destination-card swiper-slide">
+              <img
+                src="https://images.unsplash.com/photo-1527824404775-dce343118ebc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                alt=""
+                width="203"
+                height="181"
+              />
+              <h5>Prescott</h5>
+              <h6>Arizona, USA</h6>
+            </div>
+            <!-- card 3 -->
+            <div class="destination-card swiper-slide">
+              <img
+                src="https://images.unsplash.com/photo-1512936702668-1ab037aced2a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                alt=""
+                width="203"
+                height="181"
+              />
+              <h5>Fort Mayers</h5>
+              <h6>Florida, USA</h6>
+            </div>
+            <!-- card 4 -->
+            <div class="destination-card swiper-slide">
+              <img
+                src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1121&q=80"
+                alt=""
+                width="203"
+                height="181"
+              />
+              <h5>Tucson</h5>
+              <h6>Arizona, USA</h6>
+            </div>
+            <!-- card 5 -->
+            <div class="destination-card swiper-slide">
+              <img
+                src="https://images.unsplash.com/photo-1601425262040-ba23fe84f701?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                alt=""
+                width="203"
+                height="181"
+              />
+              <h5>St. Joseph</h5>
+              <h6>Michigan, USA</h6>
+            </div>
+            <!-- card 6 -->
+            <div class="destination-card swiper-slide">
+              <img
+                src="https://images.unsplash.com/photo-1539037116277-4db20889f2d4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                alt=""
+                width="203"
+                height="181"
+              />
+              <h5>Madrid</h5>
+              <h6>Spain</h6>
+            </div>
+            <!-- card 7 -->
+            <div class="destination-card swiper-slide">
+              <img
+                src="https://images.unsplash.com/photo-1542321993-8fc36217e26d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                alt=""
+                width="203"
+                height="181"
+              />
+              <h5>Senja Island</h5>
+              <h6>Norway</h6>
+            </div>
+            <!-- card 8 -->
+            <div class="destination-card swiper-slide">
+              <img
+                src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80"
+                alt=""
+                width="203"
+                height="181"
+              />
+              <h5>Eiffel Tower</h5>
+              <h6>Paris France</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hotels And Restaurants -->
+    <section class="hotel-restaurants" id="restaurants">
+      <div class="container">
+        <div class="title-container">
+          <h2 class="section-title">Hotels And Restaurants</h2>
+          <div class="section-button hotel-button">view all <img src="./Imgs/icons/bleft.png" alt="" /></div>
+        </div>
+        <!-- cards -->
+        <div class="hotel-card">
+          <!-- card 1 -->
+          <div class="hotel-cards">
+            <img
+              src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+              alt=""
+              width="320"
+              height="380"
+            />
+            <h5>Monastero Santa Rosa Hotel & Spa</h5>
+            <h6><img src="./Imgs/icons/map-pin-line.png" alt="" /> Salerno, Italy</h6>
+            <div class="ratings">
+              <img src="./Imgs/icons/rating=5.png" alt="" />
+            </div>
+          </div>
+          <!-- card 2 -->
+          <div class="hotel-cards">
+            <img
+              src="https://images.unsplash.com/photo-1586974726316-c6302de6a160?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80"
+              alt=""
+              width="320"
+              height="380"
+            />
+            <h5>Grand Hotel Tremezzo</h5>
+            <h6><img src="./Imgs/icons/map-pin-line.png" alt="" /> Lake Como, Italy</h6>
+            <div class="ratings">
+              <img src="./Imgs/icons/rating=4.png" alt="" />
+            </div>
+          </div>
+          <!-- card 3 -->
+          <div class="hotel-cards">
+            <img
+              src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80"
+              alt=""
+              width="320"
+              height="380"
+            />
+            <h5>The Oberoi Udaivilas, Udaipur</h5>
+            <h6><img src="./Imgs/icons/map-pin-line.png" alt="" /> Udaipur, India</h6>
+            <div class="ratings">
+              <img src="./Imgs/icons/rating=2.png" alt="" />
+            </div>
+          </div>
+          <!-- card 4 -->
+          <div class="hotel-cards">
+            <img
+              src="https://images.unsplash.com/photo-1498503182468-3b51cbb6cb24?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+              alt=""
+              width="320"
+              height="380"
+            />
+            <h5>AKA Beverly Hills</h5>
+            <h6><img src="./Imgs/icons/map-pin-line.png" alt="" /> Los Angeles, United States</h6>
+            <div class="ratings">
+              <img src="./Imgs/icons/rating=5.png" alt="" />
+            </div>
+          </div>
+          <!-- card 5 -->
+          <div class="hotel-cards off">
+            <img
+              src="https://images.unsplash.com/photo-1549294413-26f195200c16?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1964&q=80"
+              alt=""
+              width="320"
+              height="380"
+            />
+            <h5>Majestic Elegance</h5>
+            <h6><img src="./Imgs/icons/map-pin-line.png" alt="" /> Dominican Republic</h6>
+            <div class="ratings">
+              <img src="./Imgs/icons/rating=4.png" alt="" />
+            </div>
+          </div>
+          <!-- card 6 -->
+          <div class="hotel-cards off">
+            <img
+              src="https://images.unsplash.com/photo-1586495985096-787fb4a54ac0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80"
+              alt=""
+              width="320"
+              height="380"
+            />
+            <h5>Dreams Watervilla</h5>
+            <h6><img src="./Imgs/icons/map-pin-line.png" alt="" /> Meeru Island, Maldives</h6>
+            <div class="ratings">
+              <img src="./Imgs/icons/rating=5.png" alt="" />
+            </div>
+          </div>
+          <!-- card 7 -->
+          <div class="hotel-cards off">
+            <img
+              src="https://images.unsplash.com/photo-1594741158704-5a784b8e59fb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+              alt=""
+              width="320"
+              height="380"
+            />
+            <h5>Waldorf Astoria</h5>
+            <h6><img src="./Imgs/icons/map-pin-line.png" alt="" /> Rome, Italy</h6>
+            <div class="ratings">
+              <img src="./Imgs/icons/rating=3.png" alt="" />
+            </div>
+          </div>
+          <!-- card 8 -->
+          <div class="hotel-cards off">
+            <img
+              src="https://images.unsplash.com/photo-1525596662741-e94ff9f26de1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+              alt=""
+              width="320"
+              height="380"
+            />
+            <h5>Gilli Air</h5>
+            <h6><img src="./Imgs/icons/map-pin-line.png" alt="" /> Indonesia</h6>
+            <div class="ratings">
+              <img src="./Imgs/icons/rating=4.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tours/Travel -->
+    <section id="tours">
+      <div class="container">
+        <div class="title-container">
+          <h2 class="section-title">Travel Tips and Advice</h2>
+          <div class="section-button hotel-button">view all <img src="./Imgs/icons/bleft.png" alt="" /></div>
+        </div>
+        <div class="tours-cards">
+          <div class="tours-card">
+            <div class="tour-img">
+              <img
+                src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+                alt=""
+                width="320"
+                height="380"
+              />
+            </div>
+            <div class="tours-card-content">
+              <div class="tours-card-contents-text">
+                <h3>East Village Ice Cream Crawl</h3>
+                <p>
+                  We will stop at five different world-class ice cream shops on this 1.5 mile 1.5 hour tour. At each ice
+                  cream store we'll explore the story behind the business and see what makes the ice cream unique as you
+                  savor every…
+                </p>
+              </div>
+              <div class="tours-card-content-icons">
+                <h6><img src="./Imgs/icons/calendersml.png" alt="" /> Today</h6>
+                <h6><img src="./Imgs/icons/user.png" alt="" /> Avenger Initiative</h6>
+                <h6><img src="./Imgs/icons/message.png" alt="" /> 2</h6>
+              </div>
+            </div>
+          </div>
+
+          <div class="tours-card">
+            <div class="tour-img">
+              <img
+                src="https://images.unsplash.com/photo-1533105079780-92b9be482077?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+                alt=""
+                width="320"
+                height="380"
+              />
+            </div>
+            <div class="tours-card-content">
+              <div class="tours-card-contents-text">
+                <h3>Brooklyn Bridge cinematic photo walk</h3>
+                <p>
+                  This experience takes place at the Brooklyn Bridge Park and Brooklyn Bridge, but I’m always open to capture
+                  clients at different locations upon request for an additional charge.
+                </p>
+              </div>
+              <div class="tours-card-content-icons">
+                <h6><img src="./Imgs/icons/calendersml.png" alt="" /> Today</h6>
+                <h6><img src="./Imgs/icons/user.png" alt="" /> Ager Pagla</h6>
+                <h6><img src="./Imgs/icons/message.png" alt="" />12</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- activities -->
+    <section id="activities">
+      <div class="container">
+        <div class="title-container">
+          <h2 class="section-title">Activities</h2>
+          <div class="section-button hotel-button">view all <img src="./Imgs/icons/bleft.png" alt="" /></div>
+        </div>
+
+        <!-- Activities Cards -->
+        <div class="activities-cards">
+          <div class="activities-card">
+            <img
+              src="https://images.unsplash.com/photo-1513432800008-a900568fccfe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+              alt=""
+              width="320"
+              height="380"
+            />
+            <h4>Sailing</h4>
+          </div>
+          <div class="activities-card">
+            <img
+              src="https://images.unsplash.com/photo-1489805549589-3c5ae55fe740?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+              alt=""
+              width="320"
+              height="380"
+            />
+            <h4>Climbing</h4>
+          </div>
+          <div class="activities-card">
+            <img
+              src="https://images.unsplash.com/photo-1565992441121-4367c2967103?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80"
+              alt=""
+              width="320"
+              height="380"
+            />
+            <h4>Skiing</h4>
+          </div>
+          <div class="activities-card">
+            <img
+              src="https://images.unsplash.com/19/nomad.JPG?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1098&q=80"
+              alt=""
+              width="320"
+              height="380"
+            />
+            <h4>Hiking</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- about -->
+    <section id="About">
+      <div class="about-content">
+        <h2>About US</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a sapien justo. Nulla facilisis tristique
+          imperdiet. Nullam a placerat odio. Sed in ex augue. Aliquam porta consectetur lorem sit amet ultrices. Class aptent
+          taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+        </p>
+
+        <div class="section-button hotel-button">Read More <img src="./Imgs/icons/bleft.png" alt="" /></div>
+      </div>
+
+      <div class="about-img">
+        <img src="./Imgs/about img.png" alt="" width="556" height="488" />
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-sections">
+          <div class="footer-section">
+            <img src="./Imgs/Logo/logoblack.svg" alt="" />
+            <p>We always make our customers happy by providing as many choises as possible</p>
+            <div class="footer-social-icons">
+              <img src="./Imgs/icons/facebook.png" alt="" />
+              <img src="./Imgs/icons/twitter.png" alt="" />
+              <img src="./Imgs/icons/instagram.png" alt="" />
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <h3>About</h3>
+            <ul>
+              <li><a href="">About Us</a></li>
+              <li><a href="">Features</a></li>
+              <li><a href="">News</a></li>
+              <li><a href="">Menu</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Company</h3>
+            <ul>
+              <li><a href="">why 2rism</a></li>
+              <li><a href="">Partner with us</a></li>
+              <li><a href="">FAQ</a></li>
+              <li><a href="">Blog</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Support</h3>
+            <ul>
+              <li><a href="">Account</a></li>
+              <li><a href="">Support Center</a></li>
+              <li><a href="">Feedback</a></li>
+              <li><a href="">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>
+              Subscribe on our destination review <br />
+              newsletters
+            </h3>
+            <form>
+              <div class="form-section">
+                <img src="./Imgs/icons/messagefooter.png" alt="" />
+                <label for="email">
+                  Your Email
+                  <input type="email" id="email" name="email" placeholder="exp - abc@gmail.com " />
+                </label>
+              </div>
+              <button type="submit">
+                <img src="./Imgs/icons/arrowleft.png" alt="" />
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="toggleOn"><i class="uil uil-align-center-alt"></i></div>
+    <div class="toggleClose"><i class="uil uil-multiply"></i></div>
+    <div class="popup" id="countryPopup">
+      <div class="popup-content">
+        <input type="hidden" id="destinationType" value="from" />
+        <span class="close" onclick="closePopup()">&times;</span>
+        <label for="countrySelect">Select Country:</label>
+        <select id="countrySelect" onchange="updateCityDropdown()">
+          <!-- Country options will be populated dynamically -->
+        </select>
+        <label for="citySelect">Select City:</label>
+        <select id="citySelect" onchange="applySelection()">
+          <!-- City options will be populated dynamically based on the selected country -->
+        </select>
+        <button onclick="closePopup()">Close</button>
+      </div>
+    </div>
+
+    <div class="toggleOn"><i class="uil uil-align-center-alt"></i></div>
+    <div class="toggleClose"><i class="uil uil-multiply"></i></div>
+    <div class="popup" id="datePopup">
+      <div class="popup-content">
+        <input type="hidden" id="destinationType" value="from" />
+        <span class="close" onclick="closePopup()">&times;</span>
+        <label for="countrySelect">Select Date:</label>
+        <select id="countrySelect" onchange="updateCityDropdown()">
+          <!-- Country options will be populated dynamically -->
+        </select>
+        <label for="citySelect">Select City:</label>
+        <select id="citySelect" onchange="applySelection()">
+          <!-- City options will be populated dynamically based on the selected country -->
+        </select>
+        <button onclick="closePopup()">Close</button>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
